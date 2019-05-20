@@ -4,9 +4,9 @@ public class Address {
 
     private long id;
 
-    private String address;
+    private String street;
 
-    private String address1;
+    private String street1;
 
     private String postalCode;
 
@@ -20,20 +20,20 @@ public class Address {
         this.id = id;
     }
 
-    public String getAddress() {
-        return address;
+    public String getStreet() {
+        return street;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setStreet(String street) {
+        this.street = street;
     }
 
-    public String getAddress1() {
-        return address1;
+    public String getStreet1() {
+        return street1;
     }
 
-    public void setAddress1(String address1) {
-        this.address1 = address1;
+    public void setStreet1(String street1) {
+        this.street1 = street1;
     }
 
     public String getPostalCode() {

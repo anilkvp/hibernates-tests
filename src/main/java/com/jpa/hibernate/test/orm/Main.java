@@ -26,7 +26,7 @@ public class Main {
         Transaction transaction = session.beginTransaction();
 
         User user = new User();
-        user.setId(5);
+        user.setId(6);
         user.setUsername("sample_90");
         user.setPassword("Test@test123");
         user.setFirstName("sample");
