@@ -25,15 +25,17 @@ public class Main {
 
         Transaction transaction = session.beginTransaction();
 
-        User user = new User();
-        user.setId(6);
-        user.setUsername("sample_90");
-        user.setPassword("Test@test123");
-        user.setFirstName("sample");
-        user.setLastName("90");
-        user.setEmail("sample90@hotmail.com");
-
-        session.persist(user);
+        User user = null;
+        for(int i = 0; i <= 1000; i++) {
+            user = new User();
+            user.setId(i);
+            user.setUsername(DataGenerator.getString());
+            user.setPassword(DataGenerator.getString());
+            user.setFirstName(DataGenerator.getString());
+            user.setLastName(DataGenerator.getString());
+            user.setEmail(DataGenerator.getEmailId());
+            session.persist(user);
+        }
 
 
         Query query = session.createQuery("from User ");
