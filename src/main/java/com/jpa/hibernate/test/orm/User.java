@@ -28,9 +28,6 @@ public class User {
     @Column
     private String email;
 
-    @Transient
-    private Address address;
-
     public long getId() {
         return id;
     }
@@ -79,19 +76,10 @@ public class User {
         this.email = email;
     }
 
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
-        builder.append("[ /id :").append(this.id);
+        builder.append("[ id :").append(this.id);
         builder.append(" /username :").append(this.username);
         builder.append(" /firstname :").append(this.firstName);
         builder.append(" /lastName :").append(this.lastName);

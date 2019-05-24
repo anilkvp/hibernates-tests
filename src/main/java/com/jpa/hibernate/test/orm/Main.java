@@ -1,19 +1,18 @@
 package com.jpa.hibernate.test.orm;
 
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.Configuration;
-
-import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) throws Exception {
-        HibernateTester tester = new HibernateTester();
-        tester.startTest();
+        LOGGER.info("Starting Main main");
+        //HibernateInsertTester tester = new HibernateInsertTester();
+        //tester.startTest();
+        HibernateSelectTester selectTester = new HibernateSelectTester();
+        selectTester.startTest();
+        LOGGER.info("Ending main method ");
     }
 }
